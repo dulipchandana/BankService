@@ -1,5 +1,6 @@
 package com.igreendata.account.dto;
 
+import com.igreendata.account.util.TransactionType;
 import lombok.Getter;
 
 import java.text.SimpleDateFormat;
@@ -19,7 +20,8 @@ public class TransactionDto extends BaseDto{
     @Getter
     private Double debitAmount;
 
-    private String transactionType;
+    @Getter
+    private TransactionType transactionType;
 
     @Getter
     private String transactionNarrative;
@@ -30,7 +32,7 @@ public class TransactionDto extends BaseDto{
 
     public TransactionDto(final Long accountNumber, final String accountName, final String currency ,
                           final Date valueDate , final Double creditAmount, final Double debitAmount ,
-                          final String transactionType,final String transactionNarrative ) {
+                          final TransactionType transactionType,final String transactionNarrative ) {
         super(accountNumber, accountName, currency);
         this.setValueDate(valueDate);
         this.creditAmount = creditAmount;

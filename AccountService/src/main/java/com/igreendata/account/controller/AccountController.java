@@ -23,6 +23,10 @@ public class AccountController {
 	@Qualifier("com.igreendata.account.service.AccountServiceImpl")
 	BankService<AccountDto> accountService;
 
+	@Autowired
+	@Qualifier("com.igreendata.account.service.TransactionServiceImpl")
+	BankService<TransactionDto> transactionService;
+
 
 	@GetMapping("/accounts/{userId}")
 	public Page<AccountDto> getAccountsByUserId(@PathVariable(value = "userId") Long userId,Pageable pageable) {
@@ -32,6 +36,6 @@ public class AccountController {
 	@GetMapping("transactions/{accountId}")
 	public Page<TransactionDto> getTransactionsByAccountId(@PathVariable(value = "accountId")
 																   Long accountId,Pageable pageable){
-		return null;
+		return transactionService.getDtoById(accountId,pageable);
 	}
 }

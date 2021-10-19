@@ -18,12 +18,12 @@ import java.util.List;
 public class AccountServiceImpl implements BankService<AccountDto>{
 
     @Autowired
-    AccountRepository accountRepository;
+    AccountRepository<AccountDto> accountRepository;
     @Override
     public Page<AccountDto> getDtoById(Long id, Pageable pageable) {
 
         Page<AccountDto> accountDtoResults = accountRepository.findAccountByUserId(id,pageable);
-        if(!accountRepository.findAccountByUserId(id,pageable).isEmpty()){
+        if(!accountDtoResults.isEmpty()){
             return accountDtoResults;
         }else{
             throw  new ResourceNotFoundException("Account", "userId", id);
