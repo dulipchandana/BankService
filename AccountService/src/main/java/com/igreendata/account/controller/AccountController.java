@@ -1,5 +1,7 @@
 package com.igreendata.account.controller;
 
+import com.igreendata.account.dto.AccountDto;
+import com.igreendata.account.dto.TransactionDto;
 import com.igreendata.account.model.Account;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -19,11 +21,17 @@ public class AccountController {
 
 	@Autowired
 	@Qualifier("com.igreendata.account.service.AccountServiceImpl")
-	BankService<Account> accountService;
+	BankService<AccountDto> accountService;
 
 
-	@GetMapping("/account/{userId}")
-	public Page<Account> getAllAccountByUserId(@PathVariable(value = "userId") Long userId,Pageable pageable) {
+	@GetMapping("/accounts/{userId}")
+	public Page<AccountDto> getAccountsByUserId(@PathVariable(value = "userId") Long userId,Pageable pageable) {
 		return accountService.getDtoById(userId,pageable);
+	}
+
+	@GetMapping("transactions/{accountId}")
+	public Page<TransactionDto> getTransactionsByAccountId(@PathVariable(value = "accountId")
+																   Long accountId,Pageable pageable){
+		return null;
 	}
 }

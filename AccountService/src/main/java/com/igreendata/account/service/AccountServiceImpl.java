@@ -1,5 +1,7 @@
 package com.igreendata.account.service;
 
+import com.igreendata.account.dto.AccountDto;
+import com.igreendata.account.exception.ResourceNotFoundException;
 import com.igreendata.account.model.Account;
 import com.igreendata.account.repository.AccountRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,14 +13,20 @@ import org.springframework.stereotype.Service;
 import org.springframework.data.domain.Pageable;
 import java.util.List;
 
-@Component
+@Service
 @Qualifier("com.igreendata.account.service.AccountServiceImpl")
-public class AccountServiceImpl implements BankService<Account>{
+public class AccountServiceImpl implements BankService<AccountDto>{
 
     @Autowired
     AccountRepository accountRepository;
     @Override
-    public Page<Account> getDtoById(Long id, Pageable pageable) {
-        return accountRepository.findAccountByUserId(id,pageable);
+    public Page<AccountDto> getDtoById(Long id, Pageable pageable) {
+
+        Page<AccountDto> accountDtoResults = accountRepository.findAccountByUserId(id,pageable);
+        if(!accountRepository.findAccountByUserId(id,pageable).isEmpty()){
+            return accountDtoResults;
+        }else{
+            throw  new ResourceNotFoundException("Account", "userId", id);
+        }
     }
 }
