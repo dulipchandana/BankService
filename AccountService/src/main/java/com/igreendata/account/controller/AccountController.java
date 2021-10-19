@@ -3,6 +3,9 @@ package com.igreendata.account.controller;
 import com.igreendata.account.dto.AccountDto;
 import com.igreendata.account.dto.TransactionDto;
 import com.igreendata.account.model.Account;
+import com.igreendata.account.util.AccountConstant;
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiImplicitParams;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import com.igreendata.account.service.BankService;
@@ -29,10 +32,26 @@ public class AccountController {
 
 
 	@GetMapping("/accounts/{userId}")
+	@ApiImplicitParams({
+			@ApiImplicitParam(name = AccountConstant.PAGE, dataType = AccountConstant.INTEGER, paramType = AccountConstant.QUERY,
+					value = AccountConstant.PAGE_DESC),
+			@ApiImplicitParam(name = AccountConstant.SIZE, dataType = AccountConstant.INTEGER, paramType = AccountConstant.QUERY,
+					value = AccountConstant.SIZE_DESC),
+			@ApiImplicitParam(name = AccountConstant.SORT, allowMultiple = true, dataType = AccountConstant.STRING, paramType = AccountConstant.QUERY,
+					value = AccountConstant.SORT_DESC)
+	})
 	public Page<AccountDto> getAccountsByUserId(@PathVariable(value = "userId") Long userId,Pageable pageable) {
 		return accountService.getDtoById(userId,pageable);
 	}
 
+	@ApiImplicitParams({
+			@ApiImplicitParam(name = AccountConstant.PAGE, dataType = AccountConstant.INTEGER, paramType = AccountConstant.QUERY,
+					value = AccountConstant.PAGE_DESC),
+			@ApiImplicitParam(name = AccountConstant.SIZE, dataType = AccountConstant.INTEGER, paramType = AccountConstant.QUERY,
+					value = AccountConstant.SIZE_DESC),
+			@ApiImplicitParam(name = AccountConstant.SORT, allowMultiple = true, dataType = AccountConstant.STRING, paramType = AccountConstant.QUERY,
+					value = AccountConstant.SORT_DESC)
+	})
 	@GetMapping("transactions/{accountId}")
 	public Page<TransactionDto> getTransactionsByAccountId(@PathVariable(value = "accountId")
 																   Long accountId,Pageable pageable){
