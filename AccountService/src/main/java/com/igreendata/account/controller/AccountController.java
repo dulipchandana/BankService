@@ -4,6 +4,7 @@ import com.igreendata.account.dto.AccountDto;
 import com.igreendata.account.dto.TransactionDto;
 import com.igreendata.account.model.Account;
 import com.igreendata.account.util.AccountConstant;
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import org.springframework.data.domain.Page;
@@ -20,6 +21,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api")
+@Api(value="accountServices", description="Bank service in Account Department.")
 public class AccountController {
 
 	@Autowired
