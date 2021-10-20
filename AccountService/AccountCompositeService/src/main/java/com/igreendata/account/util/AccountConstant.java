@@ -30,4 +30,10 @@ public final class AccountConstant {
 
     /**page size description in swagger param**/
     public static final String SIZE_DESC = "Number of records per page.";
+
+    /**time stamp in controller adviser**/
+    public static final String TIME_STAMP ="timestamp";
+
+    /**Message in controller adviser**/
+    public static final String MESSAGE = "message";
 }

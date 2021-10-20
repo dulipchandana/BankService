@@ -9,7 +9,8 @@ import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 @SpringBootApplication
 @EnableDiscoveryClient
 @EnableJpaAuditing
-@ComponentScan(basePackages = {"com.igreendata.account.controller","com.igreendata.account.service","com.igreendata.account.config"})
+@ComponentScan(basePackages = {"com.igreendata.account.controller","com.igreendata.account.service","com.igreendata.account.config",
+"com.igreendata.account.advisor"})
 public class AccountServiceApplication {
 
 	public static void main(String[] args) {
