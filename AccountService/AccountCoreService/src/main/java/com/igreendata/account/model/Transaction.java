@@ -8,6 +8,11 @@ import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import java.util.Date;
 
+/**
+ * Transaction represent transaction table .
+ * @author Dulip Chandana
+ *
+ */
 @Entity
 @Table(name = "transaction")
 public class Transaction extends BaseModel{

@@ -9,6 +9,11 @@ import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import java.io.Serializable;
 
+/**
+ * CurrencyType represent currency_type table .
+ * @author Dulip Chandana
+ *
+ */
 @Entity
 @Table(name = "currency_type")
 @Getter

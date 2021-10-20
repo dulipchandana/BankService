@@ -13,6 +13,11 @@ import java.io.Serializable;
 import java.util.Date;
 import java.util.Set;
 
+/**
+ * Account class represent the account table.
+ * @author Dulip Chandana
+ *
+ */
 @Entity
 @Table(name = "account")
 @Cacheable

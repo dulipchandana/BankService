@@ -5,6 +5,11 @@ import lombok.Getter;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+/**
+ * AccountDto hold values for /accounts/ api.
+ * @author Dulip Chandana
+ *
+ */
 public class AccountDto extends BaseDto {
 
     private static final SimpleDateFormat dateFormat

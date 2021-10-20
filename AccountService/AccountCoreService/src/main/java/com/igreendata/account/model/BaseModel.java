@@ -11,7 +11,11 @@ import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
 
-
+/**
+ * BaseModel represent common fields for account , transaction audit .
+ * @author Dulip Chandana
+ *
+ */
 @MappedSuperclass
 @EntityListeners(AuditingEntityListener.class)
 @JsonIgnoreProperties(value = {"createdAt", "updatedAt"},

@@ -15,6 +15,11 @@ import java.time.LocalDateTime;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
+/**
+ * ControllerAdvisor for handle api level exceptions.
+ * @author Dulip Chandana
+ *
+ */
 @ControllerAdvice
 public class ControllerAdvisor extends ResponseEntityExceptionHandler {
 

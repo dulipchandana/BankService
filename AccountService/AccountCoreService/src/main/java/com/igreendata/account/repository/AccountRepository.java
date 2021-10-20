@@ -7,9 +7,13 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
-
 import org.springframework.data.domain.Pageable;
 
+/**
+ * AccountRepository for define query and db functions .
+ * @author Dulip Chandana
+ *
+ */
 @Repository
 public interface AccountRepository<T extends BaseDto> extends JpaRepository<Account, Long> {
 

@@ -5,6 +5,11 @@ import lombok.Setter;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
+/**
+ * IncorrectParameterException throws for incorrect parameters.
+ * @author Dulip Chandana
+ *
+ */
 @ResponseStatus(value = HttpStatus.BAD_REQUEST)
 @Setter
 @Getter

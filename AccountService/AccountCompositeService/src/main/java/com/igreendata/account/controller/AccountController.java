@@ -19,6 +19,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
 
+/**
+ * AccountController for handle /accounts/ and /transactions/ api .
+ * @author Dulip Chandana
+ *
+ */
 @RestController
 @RequestMapping("/api")
 @Api(value="accountServices", description="Bank service in Account Department.")

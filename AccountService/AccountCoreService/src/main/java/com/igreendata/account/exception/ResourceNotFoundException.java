@@ -5,7 +5,11 @@ import lombok.Getter;
 import lombok.Setter;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
-
+/**
+ * ResourceNotFoundException throws no result in result set.
+ * @author Dulip Chandana
+ *
+ */
 @ResponseStatus(value = HttpStatus.NOT_FOUND)
 @Setter
 @Getter

@@ -1,5 +1,10 @@
 package com.igreendata.account.util;
 
+/**
+ * AccountConstant for contains static fields for application.
+ * @author Dulip Chandana
+ *
+ */
 public final class AccountConstant {
 
     /**page definition for swagger query param**/

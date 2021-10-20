@@ -6,6 +6,11 @@ import lombok.Getter;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+/**
+ * TransactionDto hold values for /transactions/ api.
+ * @author Dulip Chandana
+ *
+ */
 public class TransactionDto extends BaseDto{
 
     private static final SimpleDateFormat dateFormat

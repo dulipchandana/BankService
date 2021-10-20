@@ -10,7 +10,11 @@ import org.hibernate.annotations.CacheConcurrencyStrategy;
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import java.io.Serializable;
-
+/**
+ * AccountType class represent the account_type table.
+ * @author Dulip Chandana
+ *
+ */
 @Entity
 @Table(name = "account_type")
 @Getter
