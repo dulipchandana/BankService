@@ -61,6 +61,13 @@
 			<version>2.4.0</version>
 		</dependency>
 
+		<!-- hibernate ehcache -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-ehcache</artifactId>
+			<version>5.2.2.Final</version>
+		</dependency>
+
 	</dependencies>
 
 	<dependencyManagement>
