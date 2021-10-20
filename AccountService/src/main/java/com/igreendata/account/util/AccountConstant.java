@@ -6,7 +6,7 @@ public final class AccountConstant {
     public static final String PAGE = "page";
 
     /**data type for swagger query param**/
-    public static final String INTEGER = "integer";
+    public static final String INTEGER = "int";
 
     /**query string for swagger query param**/
     public static final String QUERY = "query";
