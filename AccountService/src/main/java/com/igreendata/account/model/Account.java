@@ -15,6 +15,8 @@ import java.util.Set;
 
 @Entity
 @Table(name = "account")
+@Cacheable
+@org.hibernate.annotations.Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
 public class Account extends BaseModel{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
