@@ -1,0 +1,15 @@
+/Users/dlokubalas/Documents/Workspace/BankService/AccountService/AccountCoreService/src/main/java/com/igreendata/account/model/Transaction.java
+/Users/dlokubalas/Documents/Workspace/BankService/AccountService/AccountCoreService/src/main/java/com/igreendata/account/model/CurrencyType.java
+/Users/dlokubalas/Documents/Workspace/BankService/AccountService/AccountCoreService/src/main/java/com/igreendata/account/dto/AccountDto.java
+/Users/dlokubalas/Documents/Workspace/BankService/AccountService/AccountCoreService/src/main/java/com/igreendata/account/model/Account.java
+/Users/dlokubalas/Documents/Workspace/BankService/AccountService/AccountCoreService/src/main/java/com/igreendata/account/exception/ResourceNotFoundException.java
+/Users/dlokubalas/Documents/Workspace/BankService/AccountService/AccountCoreService/src/main/java/com/igreendata/account/util/TransactionType.java
+/Users/dlokubalas/Documents/Workspace/BankService/AccountService/AccountCoreService/src/main/java/com/igreendata/account/dto/TransactionDto.java
+/Users/dlokubalas/Documents/Workspace/BankService/AccountService/AccountCoreService/src/main/java/com/igreendata/account/repository/AccountRepository.java
+/Users/dlokubalas/Documents/Workspace/BankService/AccountService/AccountCoreService/src/main/java/com/igreendata/account/service/AccountServiceImpl.java
+/Users/dlokubalas/Documents/Workspace/BankService/AccountService/AccountCoreService/src/main/java/com/igreendata/account/model/User.java
+/Users/dlokubalas/Documents/Workspace/BankService/AccountService/AccountCoreService/src/main/java/com/igreendata/account/service/TransactionServiceImpl.java
+/Users/dlokubalas/Documents/Workspace/BankService/AccountService/AccountCoreService/src/main/java/com/igreendata/account/model/AccountType.java
+/Users/dlokubalas/Documents/Workspace/BankService/AccountService/AccountCoreService/src/main/java/com/igreendata/account/service/BankService.java
+/Users/dlokubalas/Documents/Workspace/BankService/AccountService/AccountCoreService/src/main/java/com/igreendata/account/model/BaseModel.java
+/Users/dlokubalas/Documents/Workspace/BankService/AccountService/AccountCoreService/src/main/java/com/igreendata/account/dto/BaseDto.java

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/AccountCompositeService/.mvn/.mvn.iml" filepath="$PROJECT_DIR$/AccountCompositeService/.mvn/.mvn.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AccountCompositeService/AccountCompositeService.iml" filepath="$PROJECT_DIR$/AccountCompositeService/AccountCompositeService.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AccountCoreService/AccountCoreService.iml" filepath="$PROJECT_DIR$/AccountCoreService/AccountCoreService.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AccountService.iml" filepath="$PROJECT_DIR$/AccountService.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AccountCoreService/src/main/main.iml" filepath="$PROJECT_DIR$/AccountCoreService/src/main/main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AccountCompositeService/src/main/main1.iml" filepath="$PROJECT_DIR$/AccountCompositeService/src/main/main1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AccountCoreService/src/test/test.iml" filepath="$PROJECT_DIR$/AccountCoreService/src/test/test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AccountCompositeService/src/test/test1.iml" filepath="$PROJECT_DIR$/AccountCompositeService/src/test/test1.iml" />
+    </modules>
+  </component>
+</project>
