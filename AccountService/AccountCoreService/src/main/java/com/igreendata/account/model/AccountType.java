@@ -1,19 +1,18 @@
 package com.igreendata.account.model;
 
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotBlank;
 import java.io.Serializable;
+
 /**
  * AccountType class represent the account_type table.
- * @author Dulip Chandana
  *
+ * @author Dulip Chandana
  */
 @Entity
 @Table(name = "account_type")
@@ -29,6 +28,5 @@ public class AccountType implements Serializable {
     @Column(name = "account_type_id")
     private Long id;
 
-    @NotBlank
     private String accountType;
 }

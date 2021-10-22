@@ -6,13 +6,12 @@ import lombok.Setter;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotBlank;
 import java.io.Serializable;
 
 /**
  * CurrencyType represent currency_type table .
- * @author Dulip Chandana
  *
+ * @author Dulip Chandana
  */
 @Entity
 @Table(name = "currency_type")
@@ -28,7 +27,6 @@ public class CurrencyType implements Serializable {
     @Column(name = "currency_type_id")
     private Long id;
 
-    @NotBlank
     private String currency;
 
 

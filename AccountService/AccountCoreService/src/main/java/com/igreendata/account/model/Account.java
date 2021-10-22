@@ -1,35 +1,28 @@
 package com.igreendata.account.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.Data;
 import lombok.Getter;
-import lombok.Setter;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotBlank;
-import java.io.Serializable;
 import java.util.Date;
 import java.util.Set;
 
 /**
  * Account class represent the account table.
- * @author Dulip Chandana
  *
+ * @author Dulip Chandana
  */
 @Entity
 @Table(name = "account")
 @Cacheable
 @org.hibernate.annotations.Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
-public class Account extends BaseModel{
+public class Account extends BaseModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "account_id")
     @Getter
     private Long id;
 
-    @NotBlank
     @Getter
     private String accountName;
 
@@ -43,15 +36,13 @@ public class Account extends BaseModel{
     @Getter
     private CurrencyType currencyType;
 
-    @NotBlank
     @Getter
     private Date balanceDate;
 
-    @NotBlank
     @Getter
     private Double availableBalance;
 
-    @OneToMany(mappedBy="account",fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "account", fetch = FetchType.LAZY)
     @Getter
     private Set<Transaction> transactions;
 
