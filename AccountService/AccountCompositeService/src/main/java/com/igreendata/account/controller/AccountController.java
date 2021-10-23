@@ -31,11 +31,11 @@ public class AccountController {
 
 	@Autowired
 	@Qualifier("com.igreendata.account.service.AccountServiceImpl")
-	BankService<AccountDto> accountService;
+	private BankService<AccountDto> accountService;
 
 	@Autowired
 	@Qualifier("com.igreendata.account.service.TransactionServiceImpl")
-	BankService<TransactionDto> transactionService;
+	private BankService<TransactionDto> transactionService;
 
 
 	@GetMapping("/accounts/{userId}")
