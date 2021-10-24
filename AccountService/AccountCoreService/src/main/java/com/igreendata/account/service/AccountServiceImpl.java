@@ -3,19 +3,14 @@ package com.igreendata.account.service;
 import com.igreendata.account.dto.AccountDto;
 import com.igreendata.account.exception.IncorrectParameterException;
 import com.igreendata.account.exception.ResourceNotFoundException;
-import com.igreendata.account.model.Account;
 import com.igreendata.account.repository.AccountRepository;
-import org.hibernate.HibernateException;
-import org.hibernate.QueryException;
+import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.dao.InvalidDataAccessApiUsageException;
 import org.springframework.data.domain.Page;
-import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Service;
-
 import org.springframework.data.domain.Pageable;
-import java.util.List;
+import org.springframework.stereotype.Service;
 
 /**
  * AccountServiceImpl define business logics for account .

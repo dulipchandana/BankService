@@ -1,11 +1,9 @@
 package com.igreendata.account.service;
 
-import com.igreendata.account.dto.AccountDto;
 import com.igreendata.account.dto.TransactionDto;
 import com.igreendata.account.exception.IncorrectParameterException;
 import com.igreendata.account.exception.ResourceNotFoundException;
 import com.igreendata.account.repository.AccountRepository;
-import org.hibernate.QueryException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.dao.InvalidDataAccessApiUsageException;

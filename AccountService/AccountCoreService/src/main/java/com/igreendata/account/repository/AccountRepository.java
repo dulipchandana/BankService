@@ -1,13 +1,12 @@
 package com.igreendata.account.repository;
 
-import com.igreendata.account.dto.AccountDto;
 import com.igreendata.account.dto.BaseDto;
 import com.igreendata.account.model.Account;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
-import org.springframework.data.domain.Pageable;
 
 /**
  * AccountRepository for define query and db functions .

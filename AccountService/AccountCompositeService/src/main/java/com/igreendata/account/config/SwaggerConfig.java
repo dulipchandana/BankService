@@ -11,8 +11,8 @@ import static springfox.documentation.builders.PathSelectors.regex;
 
 /**
  * SwaggerConfig for enable swagger .
- * @author Dulip Chandana
  *
+ * @author Dulip Chandana
  */
 @Configuration
 @EnableSwagger2

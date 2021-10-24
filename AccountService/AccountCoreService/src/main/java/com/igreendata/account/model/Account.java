@@ -1,6 +1,7 @@
 package com.igreendata.account.model;
 
 import lombok.Getter;
+import lombok.Setter;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 
 import javax.persistence.*;
@@ -21,9 +22,11 @@ public class Account extends BaseModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "account_id")
     @Getter
+    @Setter
     private Long id;
 
     @Getter
+    @Setter
     private String accountName;
 
     @ManyToOne(fetch = FetchType.EAGER)
@@ -37,9 +40,11 @@ public class Account extends BaseModel {
     private CurrencyType currencyType;
 
     @Getter
+    @Setter
     private Date balanceDate;
 
     @Getter
+    @Setter
     private Double availableBalance;
 
     @OneToMany(mappedBy = "account", fetch = FetchType.LAZY)

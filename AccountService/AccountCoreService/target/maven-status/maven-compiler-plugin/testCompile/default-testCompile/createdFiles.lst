@@ -1,0 +1,4 @@
+com/igreendata/account/TestApplication.class
+com/igreendata/account/repository/AccountRepositoryTest.class
+com/igreendata/account/service/AccountServiceImplTest.class
+com/igreendata/account/service/TransactionServiceImplTest.class
