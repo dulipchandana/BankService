@@ -7,8 +7,8 @@ import java.util.Date;
 
 /**
  * AccountDto hold values for /accounts/ api.
- * @author Dulip Chandana
  *
+ * @author Dulip Chandana
  */
 public class AccountDto extends BaseDto {
 
@@ -24,6 +24,16 @@ public class AccountDto extends BaseDto {
     @Getter
     private final Double availableBalance;
 
+    /**
+     * AccountDto constructor
+     *
+     * @param accountNumber
+     * @param accountName
+     * @param currency
+     * @param accountType
+     * @param balanceDate
+     * @param availableBalance
+     */
     public AccountDto(final Long accountNumber, final String accountName, final String currency,
                       final String accountType, final Date balanceDate, final Double availableBalance) {
         super(accountNumber, accountName, currency);

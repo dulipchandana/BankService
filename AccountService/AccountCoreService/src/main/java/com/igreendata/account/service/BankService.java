@@ -12,6 +12,6 @@ import org.springframework.data.domain.Pageable;
  */
 public interface BankService<T> {
 
-    Page<T> getDtoById(Long id, Pageable pageable);
+    Page<T> getDtoById(final Long id, final Pageable pageable);
 
 }

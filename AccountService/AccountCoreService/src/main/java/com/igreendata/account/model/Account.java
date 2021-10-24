@@ -21,7 +21,6 @@ public class Account extends BaseModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "account_id")
-    @Getter
     @Setter
     private Long id;
 
@@ -29,14 +28,14 @@ public class Account extends BaseModel {
     @Setter
     private String accountName;
 
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne(fetch = FetchType.EAGER,cascade = {CascadeType.MERGE})
     @JoinColumn(name = "account_type_id")
-    @Getter
+    @Setter
     private AccountType accountType;
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "currency_type_id")
-    @Getter
+    @Setter
     private CurrencyType currencyType;
 
     @Getter
@@ -47,12 +46,15 @@ public class Account extends BaseModel {
     @Setter
     private Double availableBalance;
 
-    @OneToMany(mappedBy = "account", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "account", fetch = FetchType.LAZY,cascade = {CascadeType.MERGE})
     @Getter
+    @Setter
     private Set<Transaction> transactions;
 
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne(fetch = FetchType.EAGER,cascade = {CascadeType.MERGE})
     @JoinColumn(name = "user_id")
+    @Setter
+    @Getter
     private User user;
 
 }

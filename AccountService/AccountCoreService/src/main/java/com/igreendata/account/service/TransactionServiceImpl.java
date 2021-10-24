@@ -13,29 +13,36 @@ import org.springframework.stereotype.Service;
 
 /**
  * TransactionServiceImpl service implementations for transactions  .
- * @author Dulip Chandana
  *
+ * @author Dulip Chandana
  */
 @Service
 @Qualifier("com.igreendata.account.service.TransactionServiceImpl")
-public class TransactionServiceImpl implements BankService<TransactionDto>{
+public class TransactionServiceImpl implements BankService<TransactionDto> {
 
     @Autowired
     AccountRepository<TransactionDto> transactionRepository;
 
+    /**
+     * Get TransactionDto page list with filtering accountId
+     *
+     * @param accountId
+     * @param pageable
+     * @return
+     */
     @Override
-    public Page<TransactionDto> getDtoById(Long accountId, Pageable pageable) {
+    public Page<TransactionDto> getDtoById(final Long accountId, final Pageable pageable) {
 
-        try{
-        Page<TransactionDto> transactionDtoResults = transactionRepository.findAccountAccountId
-                (accountId,pageable);
-        if(!transactionDtoResults.isEmpty()){
-            return transactionDtoResults;
-        }else{
-            throw  new ResourceNotFoundException("Transaction", "accountId", accountId);
-        }
+        try {
+            Page<TransactionDto> transactionDtoResults = transactionRepository.findAccountAccountId
+                    (accountId, pageable);
+            if (!transactionDtoResults.isEmpty()) {
+                return transactionDtoResults;
+            } else {
+                throw new ResourceNotFoundException("Transaction", "accountId", accountId);
+            }
 
-        }catch (InvalidDataAccessApiUsageException invalidDataAccessApiUsageException){
+        } catch (InvalidDataAccessApiUsageException invalidDataAccessApiUsageException) {
             throw new IncorrectParameterException("Transaction", "Sort", pageable.getSort());
 
         }

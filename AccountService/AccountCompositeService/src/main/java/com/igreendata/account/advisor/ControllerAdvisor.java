@@ -16,30 +16,43 @@ import java.util.Map;
 
 /**
  * ControllerAdvisor for handle api level exceptions.
- * @author Dulip Chandana
  *
+ * @author Dulip Chandana
  */
 @ControllerAdvice
 public class ControllerAdvisor extends ResponseEntityExceptionHandler {
 
+    /**
+     * handleResourceNotFoundException
+     * @param ex
+     * @param request
+     * @return ResponseEntity<Object>
+     */
     @ExceptionHandler(ResourceNotFoundException.class)
     public ResponseEntity<Object> handleResourceNotFoundException(
-            ResourceNotFoundException ex, WebRequest request) {
+            final ResourceNotFoundException ex, final WebRequest request) {
 
         Map<String, Object> body = new LinkedHashMap<>();
         body.put(AccountConstant.TIME_STAMP, LocalDateTime.now());
-        body.put(AccountConstant.MESSAGE,ex.getMessage());
+        body.put(AccountConstant.MESSAGE, ex.getMessage());
 
         return new ResponseEntity<>(body, HttpStatus.NOT_FOUND);
     }
 
+    /**
+     * IncorrectParameterException exception handler
+     *
+     * @param ex
+     * @param request
+     * @return ResponseEntity<Object>
+     */
     @ExceptionHandler(IncorrectParameterException.class)
     public ResponseEntity<Object> handleIncorrectParameterException(
-            IncorrectParameterException ex, WebRequest request) {
+            final IncorrectParameterException ex, final WebRequest request) {
 
         Map<String, Object> body = new LinkedHashMap<>();
         body.put(AccountConstant.TIME_STAMP, LocalDateTime.now());
-        body.put(AccountConstant.MESSAGE,ex.getMessage());
+        body.put(AccountConstant.MESSAGE, ex.getMessage());
 
         return new ResponseEntity<>(body, HttpStatus.BAD_REQUEST);
     }

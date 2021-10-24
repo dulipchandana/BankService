@@ -35,6 +35,12 @@ public class AccountController {
     private BankService<TransactionDto> transactionService;
 
 
+    /**
+     * Get Account dto list with pagination parameters
+     * @param userId
+     * @param pageable
+     * @return Page<AccountDto>
+     */
     @GetMapping("/accounts/{userId}")
     @ApiImplicitParams({
             @ApiImplicitParam(name = AccountConstant.PAGE, dataType = AccountConstant.INTEGER, paramType = AccountConstant.QUERY,
@@ -44,10 +50,16 @@ public class AccountController {
             @ApiImplicitParam(name = AccountConstant.SORT, allowMultiple = true, dataType = AccountConstant.STRING, paramType = AccountConstant.QUERY,
                     value = AccountConstant.SORT_DESC)
     })
-    public Page<AccountDto> getAccountsByUserId(@PathVariable(value = "userId") Long userId, Pageable pageable) {
+    public Page<AccountDto> getAccountsByUserId(@PathVariable(value = "userId") final Long userId, final Pageable pageable) {
         return accountService.getDtoById(userId, pageable);
     }
 
+    /**
+     * Get transactionDto list with pagination parameters
+     * @param accountId
+     * @param pageable
+     * @return Page<TransactionDto>
+     */
     @ApiImplicitParams({
             @ApiImplicitParam(name = AccountConstant.PAGE, dataType = AccountConstant.INTEGER, paramType = AccountConstant.QUERY,
                     value = AccountConstant.PAGE_DESC),
@@ -58,7 +70,7 @@ public class AccountController {
     })
     @GetMapping("transactions/{accountId}")
     public Page<TransactionDto> getTransactionsByAccountId(@PathVariable(value = "accountId")
-                                                                   Long accountId, Pageable pageable) {
+                                                                   final Long accountId, final Pageable pageable) {
         return transactionService.getDtoById(accountId, pageable);
     }
 }

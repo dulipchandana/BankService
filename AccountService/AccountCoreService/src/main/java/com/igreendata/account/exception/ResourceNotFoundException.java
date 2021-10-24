@@ -19,7 +19,13 @@ public class ResourceNotFoundException extends RuntimeException{
     private String fieldName;
     private Object fieldValue;
 
-    public ResourceNotFoundException( String resourceName, String fieldName, Object fieldValue) {
+    /**
+     * ResourceNotFoundException throws when there is no eliments in db
+     * @param resourceName
+     * @param fieldName
+     * @param fieldValue
+     */
+    public ResourceNotFoundException( final String resourceName, final String fieldName, final Object fieldValue) {
         super(String.format("%s not found with %s : '%s'", resourceName, fieldName, fieldValue));
         this.resourceName = resourceName;
         this.fieldName = fieldName;

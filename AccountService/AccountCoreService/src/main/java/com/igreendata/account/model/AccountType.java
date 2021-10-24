@@ -28,5 +28,6 @@ public class AccountType implements Serializable {
     @Column(name = "account_type_id")
     private Long id;
 
+    @Setter
     private String accountType;
 }

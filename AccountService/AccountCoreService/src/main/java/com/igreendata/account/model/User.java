@@ -15,8 +15,11 @@ public class User extends BaseModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "user_id")
+    @Setter
+    @Getter
     private Long id;
 
+    @Setter
     private String userName;
 
 }

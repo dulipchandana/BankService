@@ -31,10 +31,25 @@ public class TransactionDto extends BaseDto{
     @Getter
     private String transactionNarrative;
 
+    /**
+     * Set Value date with date for mat
+     * @param valueDate
+     */
     public void setValueDate(Date valueDate) {
         this.valueDate = dateFormat.format(valueDate);;
     }
 
+    /**
+     * TransactionDto constructor
+     * @param accountNumber
+     * @param accountName
+     * @param currency
+     * @param valueDate
+     * @param creditAmount
+     * @param debitAmount
+     * @param transactionType
+     * @param transactionNarrative
+     */
     public TransactionDto(final Long accountNumber, final String accountName, final String currency ,
                           final Date valueDate , final Double creditAmount, final Double debitAmount ,
                           final TransactionType transactionType,final String transactionNarrative ) {
