@@ -8,7 +8,10 @@
         -Spring webrelated service which is contains controller classes and swagger component
 
     -AccountCoreService 
-        -contains all model classes , Sevice classes , AOP classes and </b> -Repository classes 
+        -contains all model classes 
+        -Sevice classes 
+        -AOP classes and 
+        -Repository classes 
 
 -How to run the application
     -install Docker in host computer 
