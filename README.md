@@ -2,8 +2,8 @@
 
 #Content
 -Eureka
-    -service discovery service 
--AccountService  
+    -service discovery service
+-AccountService
     -AccountCompositeService 
         -Spring webrelated service which is contains controller classes and swagger component
 
