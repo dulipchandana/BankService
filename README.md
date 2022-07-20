@@ -14,8 +14,8 @@
         -Repository classes 
 
 -How to run the application
-    -install Docker in host computer 
-    -run 
+    1.install Docker in host computer 
+    2.run
         -docker-compose build
         
         -docker-copmpose up
