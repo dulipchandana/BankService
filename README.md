@@ -16,9 +16,8 @@
 -How to run the application
     1.install Docker in host computer 
     2.run
-        -docker-compose build
-        
-        -docker-copmpose up
+    -docker-compose build
+    -docker-copmpose up
 
 -access endpoints
 
